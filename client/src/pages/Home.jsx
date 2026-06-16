@@ -55,7 +55,7 @@ const Home = () => {
 
   const fetchFoods = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/foods");
+      const res = await axios.get("https://shoyu-backend.onrender.com/api/foods");
       setFoods(res.data);
     } catch (error) {
       console.log("Error fetching foods:", error);
@@ -116,7 +116,7 @@ const Home = () => {
       </button>
 
       <img
-        src={`http://localhost:5000${item.image}`}
+        src={`https://shoyu-backend.onrender.com${item.image}`}
         alt={item.name}
         onClick={openMenu}
         className="food-img"

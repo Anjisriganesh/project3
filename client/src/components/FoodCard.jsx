@@ -4,7 +4,7 @@ const FoodCard = ({ food, addToCart }) => {
   return (
     <div className="food-card">
       <img
-        src={`http://localhost:5000${food.image}`}
+        src={`https://shoyu-backend.onrender.com${food.image}`}
         alt={food.name}
         className="food-image"
       />
