@@ -1,0 +1,228 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 35px;
+  background:blueviolet;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  position: relative;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left {
+  gap: 12px;
+}
+
+.navbar-left h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: rgb(235, 229, 229);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.navbar-center {
+  flex: 1;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.search-box {
+  width: 280px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  outline: none;
+  background: rgba(255,255,255,0.95);
+}
+
+.search-box:focus {
+  box-shadow: 0 0 10px rgba(255,255,255,0.4);
+}
+
+.navbar-right {
+  gap: 18px;
+}
+
+.navbar-right a {
+  text-decoration: none;
+  color: #f8f9fa;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+.navbar-right a:hover {
+  color: #ff6b6b;
+}
+
+.navbar-right a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #ff6b6b;
+  transition: 0.3s;
+}
+
+.navbar-right a:hover::after {
+  width: 100%;
+}
+
+.username {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  max-width: 80px;
+  height: 34px;
+  padding: 0 12px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+}
+
+.navbar-right button {
+  background: linear-gradient(135deg, #ff4d6d, #e63946);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.navbar-right button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(230,57,70,0.4);
+}
+
+
+
+.location-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 9px;
+  margin-left: 20px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.3s ease;
+}
+
+.location-box:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(155, 74, 128, 0.4);
+}
+
+
+
+.location-icon {
+  font-size: 12px;
+  color: #ff6b6b;
+}
+
+.location-select {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  min-width: 110px;
+}
+
+.location-select option {
+  background: #ffffff;
+  color: #333;
+}
+
+.location-select::-ms-expand {
+  display: none;
+}
+
+
+
+.user-menu {
+  position: relative;
+  display: inline-block;
+}
+
+/* Username visible */
+.username {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Logout hidden initially */
+.logout-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  padding: 8px 14px;
+  border-radius: 25px;
+  border: none;
+
+  background: #ff4d6d;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+
+  opacity: 0;
+  transform: scale(0.9);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect: swap visibility */
+.user-menu:hover .username {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.user-menu:hover .logout-hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Logout hover effect */
+.logout-hover:hover {
+  background: #e63946;
+}
+.logout-hover:focus {
+  outline: none;
+  box-shadow: 0 0 0 9px rgba(179, 99, 132, 0.4);
+}
